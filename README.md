@@ -5,7 +5,7 @@
 - **Estrutura de Dados para Livros:**
 Crie uma estrutura `Livro` que armazene informações essenciais sobre cada livro na biblioteca:
 
-```json
+```c
 typedef struct {
     int idLivro;  // Identificador único para o livro
     char titulo[100];  // Título do livro
@@ -17,6 +17,7 @@ typedef struct {
 
 ```
 
+- **Cadastro de Livros:**
 - **Cadastro de Livros:**
 O programa deve permitir o cadastro de novos livros, coletando todas as informações necessárias e armazenando-as na estrutura **`Livro`**.
 - **Remoção de Livros:**
