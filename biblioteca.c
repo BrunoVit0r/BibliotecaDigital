@@ -12,7 +12,7 @@ void inicializa(){
 // Cadastrar um livro
 void cadastroLivro(int i){
     if (v[i] == NULL) {
-        v[i] = (p_livro) malloc(sizeof(Livro));
+        v[i] = (p_livro) malloc(sizeof(livro));
         fflush(stdin);
 
         printf("Digite o titulo do livro: \n");
@@ -39,11 +39,11 @@ void cadastroLivro(int i){
 // Consulta expecifica das informacoes de um livro
 void consultarUmLivro(int i){
     if( v[i] != NULL){
-        printf("Titulo:       %s \n", v[i]->titulo);
-        printf("Autor:  %s \n", v[i]->autor);
-        printf("Genero:   %s \n", v[i]->genero);
-        printf("Ano de Publicacao:   %s \n", v[i]->anoPublicacao);
-        printf("ISBN:       %s \n", v[i]->isbn);
+        printf("Titulo:              %s \n", v[i]->titulo);
+        printf("Autor:               %s \n", v[i]->autor);
+        printf("Genero:              %s \n", v[i]->genero);
+        printf("Ano de Publicacao:   %d \n", v[i]->anoPublicacao);
+        printf("ISBN:                %s \n", v[i]->isbn);
         printf("\n");
     }
 };

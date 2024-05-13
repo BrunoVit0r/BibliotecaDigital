@@ -4,16 +4,16 @@
 
 #define MAX 999
 
-typedef struct {
-    int idLivro;  // Identificador único para o livro
-    char titulo[100];  // Título do livro
+typedef struct Livro {
+    int idLivro;  // Identificador unico para o livro
+    char titulo[100];  // Titulo do livro
     char autor[100];  // Autor do livro
-    char genero[50];  // Gênero literário do livro
-    int anoPublicacao;  // Ano de publicação do livro
+    char genero[50];  // Genero literario do livro
+    int anoPublicacao;  // Ano de publicacao do livro
     char isbn[20];  // ISBN do livro
-} Livro;
+}livro;
 
-typedef Livro *p_livro;
+typedef livro *p_livro;
 
 extern p_livro v[MAX];
 
