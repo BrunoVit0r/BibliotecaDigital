@@ -32,7 +32,6 @@ void cadastroLivro(int i){
 
         printf("Digite o ISBN: \n");
         gets(v[i]->isbn);
-
     }
 };
 
@@ -53,11 +52,6 @@ void listarLivro(int i){
     for (int i = 0; i < MAX; i++) {
         listarLivro(i);
     }
-};
-
-// Remover um livro do cadastro
-void removerLivro(int i){
-
 };
 
 
