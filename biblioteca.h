@@ -1,7 +1,3 @@
-// Created by Bruno Vitor on 13/05/2024.
-#include <stdio.h>
-#include <stdlib.h>
-
 #define MAX 999
 
 typedef struct Livro {
@@ -26,6 +22,4 @@ void consultarUmLivro(int i); // Consulta expecifica das informacoes de um livro
 void listarLivro(int i); // Lista todos os livros
 
 void removerLivro(int i); // Remover um livro do cadastro
-
-
 

@@ -1,39 +1,37 @@
-// Created by Bruno Vitor on 13/05/2024.
+#include "biblioteca.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "biblioteca.h"
+
+p_livro v[MAX]; // Definição da variável v
 
 void inicializa(){
     for (int i = 0; i < MAX; i++) {
         v[i] = NULL;
     }
-};
+}
 
 // Cadastrar um livro
 void cadastroLivro(int i){
     if (v[i] == NULL) {
         v[i] = (p_livro) malloc(sizeof(livro));
-        fflush(stdin);
 
         printf("Digite o titulo do livro: \n");
-        gets(v[i]->titulo);
+        fgets(v[i]->titulo, sizeof(v[i]->titulo), stdin);
 
         printf("Digite o autor: \n");
-        gets(v[i]->autor);
-        fflush(stdin);
+        fgets(v[i]->autor, sizeof(v[i]->autor), stdin);
 
         printf("Digite o Genero: \n");
-        gets(v[i]->genero);
-        fflush(stdin);
+        fgets(v[i]->genero, sizeof(v[i]->genero), stdin);
 
         printf("Digite o Ano de Publicacao: \n");
         scanf("%d", &v[i]->anoPublicacao);
-        fflush(stdin);
+        getchar(); // Limpar o caractere de nova linha pendente no buffer
 
         printf("Digite o ISBN: \n");
-        gets(v[i]->isbn);
+        fgets(v[i]->isbn, sizeof(v[i]->isbn), stdin);
     }
-};
+}
 
 // Consulta expecifica das informacoes de um livro
 void consultarUmLivro(int i){
@@ -45,16 +43,30 @@ void consultarUmLivro(int i){
         printf("ISBN:                %s \n", v[i]->isbn);
         printf("\n");
     }
-};
+    else {
+        printf("Por favor, cadastre um novo livro. \n");
+    }
+}
 
 // Lista todos os livros
 void listarLivro(int i){
-    for (int i = 0; i < MAX; i++) {
-        listarLivro(i);
+    int encontrado = 0; // Variável para controlar se um livro foi encontrado
+
+    for (int j = 0; j < i; j++) {
+        if (v[j] != NULL) {
+            printf("Livro %d: \n", j+1);
+            printf("Titulo: %s\n", v[j]->titulo);
+            printf("Autor: %s\n", v[j]->autor);
+            printf("Genero: %s\n", v[j]->genero);
+            printf("Ano de Publicacao: %d\n", v[j]->anoPublicacao);
+            printf("ISBN: %s\n", v[j]->isbn);
+            printf("\n");
+
+            encontrado = 1; // Um livro foi encontrado
+        }
     }
-};
 
-
-
-
-
+    if (!encontrado) {
+        printf("Por favor, cadastre um novo livro.\n");
+    }
+}
