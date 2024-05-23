@@ -1,3 +1,0 @@
-C:/BibliotecaDigital/cmake-build-debug/CMakeFiles/BibliotecaDigital.dir
-C:/BibliotecaDigital/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/BibliotecaDigital/cmake-build-debug/CMakeFiles/rebuild_cache.dir

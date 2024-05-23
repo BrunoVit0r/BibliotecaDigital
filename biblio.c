@@ -1,4 +1,4 @@
-#include "biblioteca.h"
+#include "biblio.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -11,7 +11,7 @@ void inicializa(){
 }
 
 // Cadastrar um livro
-void cadastroLivro(int i){
+void cadastro_livro(int i) {
     if (v[i] == NULL) {
         v[i] = (p_livro) malloc(sizeof(livro));
 
@@ -30,8 +30,24 @@ void cadastroLivro(int i){
 
         printf("Digite o ISBN: \n");
         fgets(v[i]->isbn, sizeof(v[i]->isbn), stdin);
+
+        FILE *arquivo;
+        arquivo = fopen("C:\\BibliotecaDigital\\bd\\clientes_cadastrados.txt", "a");
+        if (arquivo) {
+            fprintf(arquivo, "Titulo: %s", v[i]->titulo);
+            fprintf(arquivo, "Autor: %s", v[i]->autor);
+            fprintf(arquivo, "Genero: %s", v[i]->genero);
+            fprintf(arquivo, "Ano de Publicacao: %d\n", v[i]->anoPublicacao);
+            fprintf(arquivo, "ISBN: %s\n", v[i]->isbn);
+        } else {
+            printf("\n Deu erro ao abrir o arquivo! \n");
+        }
+        fclose(arquivo);
+    } else {
+        printf("\n Livro já cadastrado na posição %d! \n", i);
     }
 }
+
 
 // Consulta expecifica das informacoes de um livro
 void consultarUmLivro(int i){
@@ -42,8 +58,7 @@ void consultarUmLivro(int i){
         printf("Ano de Publicacao:   %d \n", v[i]->anoPublicacao);
         printf("ISBN:                %s \n", v[i]->isbn);
         printf("\n");
-    }
-    else {
+    } else {
         printf("Por favor, cadastre um novo livro. \n");
     }
 }
@@ -67,6 +82,10 @@ void listarLivro(int i){
     }
 
     if (!encontrado) {
-        printf("Por favor, cadastre um novo livro.\n");
+        printf("O livro não foi encontrado.\n");
     }
+}
+
+void removerLivro(int i) {
+
 }

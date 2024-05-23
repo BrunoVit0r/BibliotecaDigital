@@ -15,7 +15,7 @@ extern p_livro v[MAX];
 
 void inicializa();
 
-void cadastroLivro(int i); // Cadastrar um livro
+void cadastro_livro(int i); // Cadastrar um livro
 
 void consultarUmLivro(int i); // Consulta expecifica das informacoes de um livro
 

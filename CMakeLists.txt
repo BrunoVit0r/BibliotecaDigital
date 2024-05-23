@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.26)
-project(BibliotecaDigital C)
+project(projetoLivros C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(BibliotecaDigital main.c
-        biblioteca.c
-        biblioteca.h)
+add_executable(projetoLivros main.c
+        biblio.c
+        biblio.h)
