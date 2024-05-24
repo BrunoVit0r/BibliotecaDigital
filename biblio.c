@@ -34,32 +34,41 @@ void cadastro_livro(int i) {
         FILE *arquivo;
         arquivo = fopen("C:\\BibliotecaDigital\\bd\\clientes_cadastrados.txt", "a");
         if (arquivo) {
+            fprintf(arquivo, "ID: %d\n", i+1);
             fprintf(arquivo, "Titulo: %s", v[i]->titulo);
-            fprintf(arquivo, "Autor: %s", v[i]->autor);
-            fprintf(arquivo, "Genero: %s", v[i]->genero);
-            fprintf(arquivo, "Ano de Publicacao: %d\n", v[i]->anoPublicacao);
-            fprintf(arquivo, "ISBN: %s\n", v[i]->isbn);
+            fprintf(arquivo, "Autor:  %s", v[i]->autor);
+            fprintf(arquivo, "Genero:  %s", v[i]->genero);
+            fprintf(arquivo, "Ano de Publicacao:  %d\n", v[i]->anoPublicacao);
+            fprintf(arquivo, "ISBN:  %s", v[i]->isbn);
+            fprintf(arquivo, "--------------------\n\n");
         } else {
             printf("\n Deu erro ao abrir o arquivo! \n");
         }
         fclose(arquivo);
     } else {
-        printf("\n Livro já cadastrado na posição %d! \n", i);
+        printf("\n Livro ja cadastrado na posicao %d! \n", i);
     }
 }
 
 
 // Consulta expecifica das informacoes de um livro
-void consultarUmLivro(int i){
-    if( v[i] != NULL){
-        printf("Titulo:              %s \n", v[i]->titulo);
-        printf("Autor:               %s \n", v[i]->autor);
-        printf("Genero:              %s \n", v[i]->genero);
-        printf("Ano de Publicacao:   %d \n", v[i]->anoPublicacao);
-        printf("ISBN:                %s \n", v[i]->isbn);
+void consultarUmLivro(int id){
+    // Verificar se o ID está dentro do intervalo válido
+    if (id < 0 || id >= MAX) {
+        printf("ID invalido. Por favor, insira um ID entre 0 e %d.\n", MAX - 1);
+        return;
+    }
+
+    if (v[id] != NULL) {
+        printf("ID: %d\n", id + 1);
+        printf("Titulo: %s", v[id]->titulo);
+        printf("Autor: %s", v[id]->autor);
+        printf("Genero: %s", v[id]->genero);
+        printf("Ano de Publicacao: %d\n", v[id]->anoPublicacao);
+        printf("ISBN: %s\n", v[id]->isbn);
         printf("\n");
     } else {
-        printf("Por favor, cadastre um novo livro. \n");
+        printf("Nenhum livro encontrado com o ID %d. Por favor, cadastre um novo livro.\n", id + 1);
     }
 }
 
@@ -69,10 +78,10 @@ void listarLivro(int i){
 
     for (int j = 0; j < i; j++) {
         if (v[j] != NULL) {
-            printf("Livro %d: \n", j+1);
-            printf("Titulo: %s\n", v[j]->titulo);
-            printf("Autor: %s\n", v[j]->autor);
-            printf("Genero: %s\n", v[j]->genero);
+            printf("ID: %d\n", j+1);
+            printf("Titulo: %s", v[j]->titulo);
+            printf("Autor: %s", v[j]->autor);
+            printf("Genero: %s", v[j]->genero);
             printf("Ano de Publicacao: %d\n", v[j]->anoPublicacao);
             printf("ISBN: %s\n", v[j]->isbn);
             printf("\n");
@@ -82,7 +91,7 @@ void listarLivro(int i){
     }
 
     if (!encontrado) {
-        printf("O livro não foi encontrado.\n");
+        printf("O livro nao foi encontrado.\n\n");
     }
 }
 

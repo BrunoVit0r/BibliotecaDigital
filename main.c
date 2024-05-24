@@ -4,9 +4,10 @@
 int main() {
     int i = 0;
     int opcao = 0;
+    inicializa();
 
     do{
-        int p = 0;
+        int id = 0;
         printf("\n");
         printf("============== \n");
         printf("Menu Principal \n");
@@ -27,14 +28,17 @@ int main() {
                 getchar();
                 break;
             case 2:
-                printf("Digite a posicao do livro \n");
-                scanf("%d", &p);
-                consultarUmLivro(p);
+                printf("Digite o ID do livro para consultar \n");
+                scanf("%d", &id);
+                getchar(); // Limpar o caractere de nova linha pendente no buffer
+                consultarUmLivro(id - 1);
+                printf("Aperte um botao para continuar \n");
                 getchar();
                 break;
             case 3:
                 printf("Lista com todos os livros \n");
                 listarLivro(i);
+                printf("Aperte um botao para continuar \n");
                 getchar();
                 break;
             case 9:
