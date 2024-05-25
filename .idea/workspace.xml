@@ -20,10 +20,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b60e198-11aa-4724-a7c8-0c51bbc28290" name="Changes" comment="Implementação do Cadastro Livro em arquivo">
+    <list default="true" id="6b60e198-11aa-4724-a7c8-0c51bbc28290" name="Changes" comment="Correções ID e Consultar Livros">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/biblio.c" beforeDir="false" afterPath="$PROJECT_DIR$/biblio.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +174,8 @@
       <workItem from="1716414290592" duration="5290000" />
       <workItem from="1716421785104" duration="1205000" />
       <workItem from="1716466045353" duration="1644000" />
-      <workItem from="1716579377609" duration="5254000" />
+      <workItem from="1716579377609" duration="5342000" />
+      <workItem from="1716642390980" duration="6391000" />
     </task>
     <task id="LOCAL-00001" summary="Implementação do Cadastro Livro em arquivo">
       <option name="closed" value="true" />
@@ -185,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716422762033</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Correções ID e Consultar Livros">
+      <option name="closed" value="true" />
+      <created>1716584731370</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716584731370</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +207,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Envio do Readme.md" />
     <MESSAGE value="Implementação do Cadastro Livro em arquivo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementação do Cadastro Livro em arquivo" />
+    <MESSAGE value="Correções ID e Consultar Livros" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correções ID e Consultar Livros" />
   </component>
 </project>
