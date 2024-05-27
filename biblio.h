@@ -1,5 +1,13 @@
 #define MAX 999
 
+typedef struct {
+    char login[30];
+    char senha[30];
+}pessoa;
+
+typedef pessoa *pessoa_P[1];
+extern pessoa_P P;
+
 typedef struct Livro {
     int idLivro;  // Identificador unico para o livro
     char titulo[100];  // Titulo do livro
@@ -15,9 +23,11 @@ extern p_livro v[MAX];
 
 void inicializa();
 
+void login();
+
 void cadastro_livro(int i); // Cadastrar um livro
 
-void consultarUmLivro(int i); // Consulta expecifica das informacoes de um livro
+void consultarUmLivro(int id); // Consulta expecifica das informacoes de um livro
 
 void listarLivro(int i); // Lista todos os livros
 

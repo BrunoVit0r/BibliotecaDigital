@@ -1,10 +1,13 @@
 #include <stdio.h>
 #include "biblio.h"
+#include <string.h>
+#include <stdlib.h>
 
 int main() {
     int i = 0;
     int opcao = 0;
     inicializa();
+    login();
 
     do{
         int id = 0;
@@ -23,7 +26,7 @@ int main() {
         switch (opcao) {
             case 1:
                 cadastro_livro(i);
-                printf("Aperte um botao para continuar \n");
+                printf("Livro Cadastrado com Sucesso! Aperte um botao para continuar. \n");
                 i++;
                 getchar();
                 break;
@@ -36,7 +39,9 @@ int main() {
                 getchar();
                 break;
             case 3:
-                printf("Lista com todos os livros \n");
+                printf("===================================== \n");
+                printf("    Lista com todos os livros \n");
+                printf("===================================== \n");
                 listarLivro(i);
                 printf("Aperte um botao para continuar \n");
                 getchar();

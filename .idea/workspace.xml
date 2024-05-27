@@ -20,9 +20,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b60e198-11aa-4724-a7c8-0c51bbc28290" name="Changes" comment="Correções ID e Consultar Livros">
+    <list default="true" id="6b60e198-11aa-4724-a7c8-0c51bbc28290" name="Changes" comment="Implementação Consultar Livro por ID do documento TXT">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/biblio.c" beforeDir="false" afterPath="$PROJECT_DIR$/biblio.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/biblio.h" beforeDir="false" afterPath="$PROJECT_DIR$/biblio.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +177,9 @@
       <workItem from="1716421785104" duration="1205000" />
       <workItem from="1716466045353" duration="1644000" />
       <workItem from="1716579377609" duration="5342000" />
-      <workItem from="1716642390980" duration="6391000" />
+      <workItem from="1716642390980" duration="7326000" />
+      <workItem from="1716766540978" duration="1195000" />
+      <workItem from="1716808986435" duration="7247000" />
     </task>
     <task id="LOCAL-00001" summary="Implementação do Cadastro Livro em arquivo">
       <option name="closed" value="true" />
@@ -193,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716584731370</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Implementação Consultar Livro por ID do documento TXT">
+      <option name="closed" value="true" />
+      <created>1716649119734</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716649119734</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +220,7 @@
     <MESSAGE value="Envio do Readme.md" />
     <MESSAGE value="Implementação do Cadastro Livro em arquivo" />
     <MESSAGE value="Correções ID e Consultar Livros" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correções ID e Consultar Livros" />
+    <MESSAGE value="Implementação Consultar Livro por ID do documento TXT" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementação Consultar Livro por ID do documento TXT" />
   </component>
 </project>
