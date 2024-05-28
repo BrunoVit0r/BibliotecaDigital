@@ -20,7 +20,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b60e198-11aa-4724-a7c8-0c51bbc28290" name="Changes" comment="Implementação Consultar Livro por ID do documento TXT">
+    <list default="true" id="6b60e198-11aa-4724-a7c8-0c51bbc28290" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/biblio.c" beforeDir="false" afterPath="$PROJECT_DIR$/biblio.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/biblio.h" beforeDir="false" afterPath="$PROJECT_DIR$/biblio.h" afterDir="false" />
@@ -179,7 +179,11 @@
       <workItem from="1716579377609" duration="5342000" />
       <workItem from="1716642390980" duration="7326000" />
       <workItem from="1716766540978" duration="1195000" />
-      <workItem from="1716808986435" duration="7247000" />
+      <workItem from="1716808986435" duration="7371000" />
+      <workItem from="1716901118495" duration="4299000" />
+      <workItem from="1716907215400" duration="2923000" />
+      <workItem from="1716920493041" duration="1343000" />
+      <workItem from="1716923755189" duration="6957000" />
     </task>
     <task id="LOCAL-00001" summary="Implementação do Cadastro Livro em arquivo">
       <option name="closed" value="true" />
@@ -205,7 +209,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716649119734</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Merge dos códigos + Implementação Login / Listar livros pelo documento">
+      <option name="closed" value="true" />
+      <created>1716818603055</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716818603055</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +233,7 @@
     <MESSAGE value="Implementação do Cadastro Livro em arquivo" />
     <MESSAGE value="Correções ID e Consultar Livros" />
     <MESSAGE value="Implementação Consultar Livro por ID do documento TXT" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementação Consultar Livro por ID do documento TXT" />
+    <MESSAGE value="Merge dos códigos + Implementação Login / Listar livros pelo documento" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge dos códigos + Implementação Login / Listar livros pelo documento" />
   </component>
 </project>

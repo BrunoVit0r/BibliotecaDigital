@@ -1,3 +1,4 @@
+
 #define MAX 999
 
 typedef struct {
@@ -15,6 +16,8 @@ typedef struct Livro {
     char genero[50];  // Genero literario do livro
     int anoPublicacao;  // Ano de publicacao do livro
     char isbn[20];  // ISBN do livro
+    int disponibilidade; // 0 = indisponivel, 1 = disponivel
+    char data[12];
 }livro;
 
 typedef livro *p_livro;
@@ -30,6 +33,10 @@ void cadastro_livro(int i); // Cadastrar um livro
 void consultarUmLivro(int id); // Consulta expecifica das informacoes de um livro
 
 void listarLivro(int i); // Lista todos os livros
+
+void emprestimo(); // Reservar um livro para o usuario
+
+void devolver(int id); // Devolucao de livros
 
 void removerLivro(int i); // Remover um livro do cadastro
 
