@@ -7,6 +7,7 @@
 int main() {
     int i = 0;
     int opcao = 0;
+
     inicializa();
     //login();
 
@@ -21,6 +22,7 @@ int main() {
         printf("3. Consultar todos os livros \n");
         printf("4. Emprestimo de livros \n");
         printf("5. Devolucao de livros \n");
+        printf("6. Deletar um livro \n");
         printf("9. Sair do programa \n");
         printf("Digite sua opcao: \n");
         scanf("%d", &opcao);
@@ -80,6 +82,16 @@ int main() {
             printf("Aperte um botao para continuar. \n");
             getchar();
             break;
+            case 6:
+                printf("===================================== \n");
+                printf("        Deletar um livro \n");
+                printf("===================================== \n");
+                printf("Digite o ID do livro para deletar: \n");
+                scanf("%d", &id);
+                removerLivro(id);
+                printf("Aperte um botao para continuar \n");
+                getchar();
+                break;
             case 9:
                 printf("Fim. \n");
                 break;

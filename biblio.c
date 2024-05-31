@@ -143,7 +143,7 @@ void consultarUmLivro(int id) {
                     printf("Genero: %s\n", v[id]->genero);
                     printf("Ano de Publicacao: %d\n", v[id]->anoPublicacao);
                     printf("ISBN: %s\n", v[id]->isbn);
-                    printf("Disponibilidade: %s\n", v[id]->disponibilidade ? "Disponivel" : "Indisponivel");
+                    printf("Disponibilidade: %s\n", v[id]->disponibilidade ? "disponivel" : "indisponivel");
                     printf("\n");
                     break;
                 }
@@ -188,9 +188,9 @@ void listarLivro(int i) {
 void emprestimo(int id) {
     FILE *arquivo = fopen("C:\\BibliotecaDigital\\bd\\clientes_cadastrados.txt", "r+");
     if (arquivo) {
-        // Verificar se o ID está dentro do intervalo válido
+        // Verificar se o ID esta dentro do intervalo valido
         if (id < 0 || id >= MAX) {
-            printf("ID inválido. Por favor, insira um ID entre 0 e %d.\n", MAX - 1);
+            printf("ID invalido. Por favor, insira um ID entre 0 e %d.\n", MAX - 1);
             fclose(arquivo);
             return;
         }
@@ -240,29 +240,25 @@ void emprestimo(int id) {
                     fgets(buffer, sizeof(buffer), arquivo);
                     sscanf(buffer, "ISBN: %[^\n]", v[id]->isbn);
 
-                    posicao = ftell(arquivo); // Guardar a posição antes de ler a disponibilidade
+                    posicao = ftell(arquivo); // Guardar a posicao antes de ler a disponibilidade
 
                     fgets(buffer, sizeof(buffer), arquivo);
                     sscanf(buffer, "Disponibilidade: %d", &v[id]->disponibilidade);
 
-                    // Verificar disponibilidade
-                    if (v[id]->disponibilidade == 0) {
-                        printf("O livro ja esta reservado.\n");
-                        break;
-                    }
-
-                    if (v[id]->disponibilidade == 1) {
+                    if (v[id]->disponibilidade) {
                         // Marcar o livro como indisponivel
                         v[id]->disponibilidade = 0;
 
                         // Voltar a posicao da disponibilidade e atualizar o status
                         fseek(arquivo, posicao, SEEK_SET);
-                        fprintf(arquivo, "Disponibilidade: %d\n", v[id]->disponibilidade);
+                        fprintf(arquivo, "Disponibilidade: %s\n", v[id]->disponibilidade ? "disponivel" : "indisponivel");
                         fseek(arquivo, 0, SEEK_END);
 
                         printf("Livro emprestado com sucesso em %s\n", dataAtual);
                         printf("Data de Devolucao do livro: %s\n", dataDevolucao);
                         printf("\n");
+                    } else {
+                        printf("O livro ja esta indisponivel.\n");
                     }
                     break;
                 }
@@ -278,13 +274,13 @@ void emprestimo(int id) {
     }
 }
 
-
+// Devolucao de livro
 void devolver(int id) {
 FILE *arquivo = fopen("C:\\BibliotecaDigital\\bd\\clientes_cadastrados.txt", "r+");
     if (arquivo) {
         // Verificar se o ID está dentro do intervalo válido
         if (id < 0 || id >= MAX) {
-            printf("ID inválido. Por favor, insira um ID entre 0 e %d.\n", MAX - 1);
+            printf("ID invalido. Por favor, insira um ID entre 0 e %d.\n", MAX - 1);
             fclose(arquivo);
             return;
         }
@@ -293,15 +289,15 @@ FILE *arquivo = fopen("C:\\BibliotecaDigital\\bd\\clientes_cadastrados.txt", "r+
         int idArquivo;
         int idEncontrado = 0;
         char buffer[256];
+        char dataAtual[12];
         char dataDevolucao[12];
 
-        // Calcular a data de devolucao (14 dias apos a data atual)
-        time_t t = time(NULL);
-        t += 14 * 24 * 60 * 60; // Adiciona 14 dias em segundos
-        struct tm tm = *localtime(&t);
-        sprintf(dataDevolucao, "%02d/%02d/%04d", tm.tm_mday, tm.tm_mon + 1, tm.tm_year + 1900);
+        // Calcular a data atual
+        time_t p = time(NULL);
+        struct tm p_tm = *localtime(&p);
+        sprintf(dataAtual, "%02d/%02d/%04d", p_tm.tm_mday, p_tm.tm_mon + 1, p_tm.tm_year + 1900);
 
-        long posicao = 0;  // Para armazenar a posição no arquivo
+        long posicao = 0;  // Para armazenar a posicao no arquivo
 
         while (fgets(buffer, sizeof(buffer), arquivo)) {
             if (sscanf(buffer, "ID: %d", &idArquivo) == 1) {
@@ -328,14 +324,14 @@ FILE *arquivo = fopen("C:\\BibliotecaDigital\\bd\\clientes_cadastrados.txt", "r+
                     fgets(buffer, sizeof(buffer), arquivo);
                     sscanf(buffer, "ISBN: %[^\n]", v[id]->isbn);
 
-                    posicao = ftell(arquivo); // Guardar a posição antes de ler a disponibilidade
+                    posicao = ftell(arquivo); // Guardar a posicao antes de ler a disponibilidade
 
                     fgets(buffer, sizeof(buffer), arquivo);
                     sscanf(buffer, "Disponibilidade: %d", &v[id]->disponibilidade);
 
                     // Verificar disponibilidade
-                    if (v[id]->disponibilidade) {
-                        // Marcar o livro como disponível
+                    if (v[id]->disponibilidade == 0) {
+                        // Marcar o livro como disponivel
                         v[id]->disponibilidade = 1;
 
                         // Voltar a posicao da disponibilidade e atualizar o status
@@ -343,9 +339,10 @@ FILE *arquivo = fopen("C:\\BibliotecaDigital\\bd\\clientes_cadastrados.txt", "r+
                         fprintf(arquivo, "Disponibilidade: %s\n", v[id]->disponibilidade ? "disponivel" : "indisponivel");
                         fseek(arquivo, 0, SEEK_END);
 
-                        printf("Livro devolvido com sucesso em %s\n", dataDevolucao);
+                        printf("Livro devolvido em %s\n", dataAtual);
+                        printf("\n");
                     } else {
-                        printf("O livro esta indisponivel.\n");
+                        printf("O livro esta disponivel para emprestimo.\n");
                     }
                     break;
                 }
@@ -361,6 +358,55 @@ FILE *arquivo = fopen("C:\\BibliotecaDigital\\bd\\clientes_cadastrados.txt", "r+
     }
 }
 
-void removerLivro(int i) {
+// Remover um livro da base de dados
+void removerLivro(int id) {
+    FILE *arquivo = fopen("C:\\BibliotecaDigital\\bd\\clientes_cadastrados.txt", "r");
+    FILE *arquivoAux = fopen("C:\\BibliotecaDigital\\bd\\temp.txt", "w");
 
+    if (arquivo == NULL || arquivoAux == NULL) {
+        printf("Erro ao abrir o arquivo.\n");
+        return;
+    }
+
+    char buffer[256];
+    int idArquivo;
+    int idEncontrado = 0;
+
+    // Atualizar o vetor na memoria
+    for (int i = 0; i < MAX; i++) {
+        if (v[i] != NULL && v[i]->idLivro == id) {
+            free(v[i]);
+            v[i] = NULL;
+            idEncontrado = 1;
+            break;
+        }
+    }
+
+    // Copiar os registros do arquivo original para o arquivo temporario, exceto o registro com o ID a ser removido
+    while (fgets(buffer, sizeof(buffer), arquivo)) {
+        if (sscanf(buffer, "ID: %d", &idArquivo) == 1) {
+            if (idArquivo == id) {
+                // Encontrou o livro a ser removido, pular suas linhas
+                idEncontrado = 1;
+                for (int i = 0; i < 8; i++) {
+                    fgets(buffer, sizeof(buffer), arquivo);
+                }
+                continue;
+            }
+        }
+        fprintf(arquivoAux, "%s", buffer); // Copiar a linha atual para o arquivo temporario
+    }
+
+    fclose(arquivo);
+    fclose(arquivoAux);
+
+    // Substituir o arquivo original pelo arquivo temporario
+    remove("C:\\BibliotecaDigital\\bd\\clientes_cadastrados.txt");
+    rename("C:\\BibliotecaDigital\\bd\\temp.txt", "C:\\BibliotecaDigital\\bd\\clientes_cadastrados.txt");
+
+    if (idEncontrado) {
+        printf("Livro com ID %d removido com sucesso.\n", id);
+    } else {
+        printf("Livro com ID %d nao encontrado.\n", id);
+    }
 }

@@ -20,10 +20,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b60e198-11aa-4724-a7c8-0c51bbc28290" name="Changes" comment="">
+    <list default="true" id="6b60e198-11aa-4724-a7c8-0c51bbc28290" name="Changes" comment="Implementação Emprestimo / Devolução">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/biblio.c" beforeDir="false" afterPath="$PROJECT_DIR$/biblio.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/biblio.h" beforeDir="false" afterPath="$PROJECT_DIR$/biblio.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -183,7 +182,12 @@
       <workItem from="1716901118495" duration="4299000" />
       <workItem from="1716907215400" duration="2923000" />
       <workItem from="1716920493041" duration="1343000" />
-      <workItem from="1716923755189" duration="6957000" />
+      <workItem from="1716923755189" duration="7331000" />
+      <workItem from="1717107466416" duration="1120000" />
+      <workItem from="1717161049473" duration="2349000" />
+      <workItem from="1717163752560" duration="3742000" />
+      <workItem from="1717167804119" duration="1102000" />
+      <workItem from="1717175330435" duration="4309000" />
     </task>
     <task id="LOCAL-00001" summary="Implementação do Cadastro Livro em arquivo">
       <option name="closed" value="true" />
@@ -217,7 +221,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716818603055</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Implementação Emprestimo / Devolução">
+      <option name="closed" value="true" />
+      <created>1716931138915</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716931138915</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +246,7 @@
     <MESSAGE value="Correções ID e Consultar Livros" />
     <MESSAGE value="Implementação Consultar Livro por ID do documento TXT" />
     <MESSAGE value="Merge dos códigos + Implementação Login / Listar livros pelo documento" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge dos códigos + Implementação Login / Listar livros pelo documento" />
+    <MESSAGE value="Implementação Emprestimo / Devolução" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementação Emprestimo / Devolução" />
   </component>
 </project>
