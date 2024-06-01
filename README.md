@@ -1,52 +1,58 @@
-# Biblioteca Digital
+# Biblioteca Digital 📚
+Frase do elevador
+## Descrição Geral do Projeto
+Aqui, você fornecerá um resumo do propósito do projeto e suas principais funcionalidades. Isso pode incluir uma breve introdução ao contexto do projeto e uma visão geral do que a equipe está tentando alcançar. Acrescente a Visão do Produto (sugestão: usar o formato da frase do elevador).
+## Requisitos Funcionais
+Esta seção detalhará as funcionalidades específicas que o projeto deve ter. Isso pode ser organizado em uma lista de requisitos (Backlog do Projeto), onde cada item é uma História do Usuário contendo: id, prioridade, título (cartão), descrição (conversa) e critério de aceitação (confirmação). 
+  ## Guia Do Usuário
+  Esta seção fornecerá instruções detalhadas sobre como usar o sistema. Pode incluir:
+  Instruções passo a passo para as principais funcionalidades.
+  Capturas de tela das interfaces de usuário para orientar os usuários.
+  Dicas ou melhores práticas para utilizar o sistema de forma eficaz.
+### 📋 Pré-requisitos
 
-## Requisitos Detalhados:
-
-- **Estrutura de Dados para Livros:**
-Crie uma estrutura `Livro` que armazene informações essenciais sobre cada livro na biblioteca:
-
-```c
-typedef struct {
-    int idLivro;  // Identificador único para o livro
-    char titulo[100];  // Título do livro
-    char autor[100];  // Autor do livro
-    char genero[50];  // Gênero literário do livro
-    int anoPublicacao;  // Ano de publicação do livro
-    char isbn[20];  // ISBN do livro
-} Livro;
+De que coisas você precisa para instalar o software e como instalá-lo?
 
 ```
+Dar exemplos
+```
+### 🔧 Instalação
 
-- **Cadastro de Livros:**
-- **Cadastro de Livros:**
-O programa deve permitir o cadastro de novos livros, coletando todas as informações necessárias e armazenando-as na estrutura **`Livro`**.
-- **Remoção de Livros:**
-Implemente uma funcionalidade que permita ao usuário remover livros do sistema, identificando-os pelo seu ID.
-- **Consulta de Livros:**
-Desenvolva uma função que permita ao usuário consultar informações detalhadas de um livro específico, utilizando seu ID para busca.
-- **Listagem de Livros:**
-O sistema deve ser capaz de listar todos os livros cadastrados, com opções para filtrar por autor, gênero ou ano de publicação.
-- **Persistência de Dados:**
-Todas as informações dos livros devem ser armazenadas em um arquivo, para garantir que os dados sejam preservados entre as sessões do programa.
-- **Interface do Usuário:**
-Desenvolva uma interface de linha de comando que facilite a interação com o sistema, permitindo realizar todas as operações de maneira simples e intuitiva.
-- **Digrama de Caso de Uso:**
-    
-    Criar um Diagrama de Caso de Uso que represente todas as interações possíveis dos usuários com o sistema de biblioteca digital.
-    
-    ### Requisitos Adicionais:
-    
-    - **Documentação do Projeto:**
-    Preparem uma documentação completa para o sistema de Biblioteca Digital. A documentação deve incluir:
-        - **Parte Escrita:**
-            - **Descrição Geral do Sistema:** Um resumo do propósito e das funcionalidades do sistema.
-            - **Requisitos Funcionais:** Uma descrição detalhada de todas as funcionalidades e casos de uso implementados no sistema.
-            - **Diagramas:** Incluir diagramas de caso de uso já desenvolvidos, diagramas de fluxo de dados e quaisquer outros diagramas relevantes que ajudem a visualizar a arquitetura e o fluxo do sistema.
-            - **Guia do Usuário:** Instruções passo a passo sobre como usar o sistema, incluindo screenshots das interfaces de usuário.
-            - **Seção de Problemas e Soluções:** Uma discussão sobre quaisquer desafios enfrentados durante o desenvolvimento e como foram resolvidos.
-        - **Comentários no Código:**
-            - **Código Fonte Comentado:** Todos os arquivos de código devem incluir comentários detalhados explicando a funcionalidade de blocos de código importantes e a lógica por trás de decisões de programação críticas.
-            - **Funções e Módulos:** Cada função e módulo deve ter uma breve descrição de sua finalidade e de quaisquer parâmetros ou valores de retorno.
-            - **Estruturas de Dados:** Comentários detalhados sobre as estruturas de dados usadas, explicando o motivo da escolha e como elas são utilizadas no sistema.
-        
-        Esta documentação deve ser entregue em formato digital, preferencialmente em PDF, e deve ser clara, concisa e bem organizada para facilitar a compreensão e a manutenção do sistema.
+Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
+
+Diga como essa etapa será:
+
+```
+Dar exemplos
+```
+
+E repita:
+
+```
+Até finalizar
+```
+## Construído com
+
+Mencione as ferramentas que você usou para criar seu projeto
+
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
+* [Maven](https://maven.apache.org/) - Gerente de Dependência
+* [ROME](https://rometools.github.io/rome/) - Usada para gerar RSS
+## Problemas e soluções
+Aqui, você pode discutir quaisquer desafios que a equipe enfrentou durante o desenvolvimento do projeto e como eles foram resolvidos. Isso pode incluir questões técnicas, obstáculos de comunicação ou outros problemas que surgiram e foram superados.
+## Autores
+
+Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
+
+* **Um desenvolvedor** - *Trabalho Inicial* - [umdesenvolvedor](https://github.com/linkParaPerfil)
+* **Fulano De Tal** - *Documentação* - [fulanodetal](https://github.com/linkParaPerfil)
+
+Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
+
+## Expressões de gratidão
+
+* Conte a outras pessoas sobre este projeto 📢;
+* Convide alguém da equipe para uma cerveja 🍺;
+* Um agradecimento publicamente 🫂;
+* etc.
+  
