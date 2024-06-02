@@ -21,10 +21,6 @@ Nosso projeto se concentrou na criação de uma biblioteca digital que oferece a
 * Remoção de Livros
 
 ## Guia Do Usuário
-  Esta seção fornecerá instruções detalhadas sobre como usar o sistema. Pode incluir:
-  Instruções passo a passo para as principais funcionalidades.
-  Capturas de tela das interfaces de usuário para orientar os usuários.
-  Dicas ou melhores práticas para utilizar o sistema de forma eficaz.
 ### 📋 Pré-requisitos
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: [Git](https://git-scm.com), [CLion](https://www.jetbrains.com/pt-br/clion/).
 ### 🔧 Instalação
