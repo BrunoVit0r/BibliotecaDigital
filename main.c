@@ -9,7 +9,7 @@ int main() {
     int opcao = 0;
 
     inicializa();
-    //login();
+    login();
 
     do{
         int id = 0;
