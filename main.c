@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <time.h>
 
+
 int main() {
     int i = 0;
     int opcao = 0;
@@ -11,6 +12,9 @@ int main() {
     inicializa();
     login();
 
+    /**
+     * Menu para escolher opções
+     */
     do{
         int id = 0;
         printf("\n");
@@ -28,6 +32,9 @@ int main() {
         scanf("%d", &opcao);
         getchar();
 
+        /**
+         * Switch para escolher opções
+         */
         switch (opcao) {
             case 1:
                 printf("===================================== \n");
@@ -45,7 +52,7 @@ int main() {
                 printf("ID: ");
                 scanf("%d", &id);
                 printf("\n");
-                getchar(); // Limpar o caractere de nova linha pendente no buffer
+                getchar(); /** Limpar o caractere de nova linha pendente no buffer */
                 consultarUmLivro(id - 1);
                 printf("Aperte um botao para continuar. \n");
                 getchar();
@@ -65,7 +72,7 @@ int main() {
                 printf("ID: ");
                 scanf("%d", &id);
                 printf("\n");
-                getchar(); // Limpar o caractere de nova linha pendente no buffer
+                getchar();
                 emprestimo(id);
                 printf("Aperte um botao para continuar. \n");
                 getchar();
@@ -77,7 +84,7 @@ int main() {
                 printf("ID: ");
                 scanf("%d", &id);
                 printf("\n");
-                getchar(); // Limpar o caractere de nova linha pendente no buffer
+                getchar();
                 devolver(id);
             printf("Aperte um botao para continuar. \n");
             getchar();

@@ -4,16 +4,28 @@
 #include <string.h>
 #include <time.h>
 
-pessoa_P P; // Definicao de variavel P
+/**
+ * Importando o typedef pessoa
+ */
+pessoa_P P;
 
-p_livro v[MAX]; // Definicao da variavel v
+/**
+ * Definicao da variavel v
+ */
+p_livro v[MAX];
 
+/**
+ * Inicializar a aplicação
+ */
 void inicializa(){
     for (int i = 0; i < MAX; i++) {
         v[i] = NULL;
     }
 }
 
+/**
+ * Login do usuário
+ */
 void login(){
     char login[30];
     char senha[30];
@@ -43,7 +55,9 @@ void login(){
     free(P[0]);
 }
 
-// Cadastrar um livro
+/**
+ * Cadastrar livro
+ */
 void cadastro_livro(int i) {
 
     if (v[i] == NULL) {
@@ -92,7 +106,9 @@ void cadastro_livro(int i) {
     }
 }
 
-// Consulta especifica das informacoes de um livro
+/**
+ * Consulta especifica das informaçôes de um livro
+ */
 void consultarUmLivro(int id) {
     FILE *arquivo = fopen("C:\\BibliotecaDigital\\bd\\clientes_cadastrados.txt", "r");
 
@@ -159,7 +175,9 @@ void consultarUmLivro(int id) {
     }
 }
 
-// Listar todos os livros
+/**
+ * Listar todos os livros
+ */
 void listarLivro(int i) {
     FILE *arquivo = fopen("C:\\BibliotecaDigital\\bd\\clientes_cadastrados.txt", "r");
 
@@ -176,7 +194,9 @@ void listarLivro(int i) {
     fclose(arquivo);
 }
 
-// Emprestimo de livros (reserva)
+/**
+ * Emprestimo de livros (reserva)
+ */
 void emprestimo(int id) {
     FILE *arquivo = fopen("C:\\BibliotecaDigital\\bd\\clientes_cadastrados.txt", "r+");
     if (arquivo) {
@@ -266,7 +286,9 @@ void emprestimo(int id) {
     }
 }
 
-// Devolucao de livro
+/**
+ * Devolução de livro
+ */
 void devolver(int id) {
 FILE *arquivo = fopen("C:\\BibliotecaDigital\\bd\\clientes_cadastrados.txt", "r+");
     if (arquivo) {
@@ -350,7 +372,9 @@ FILE *arquivo = fopen("C:\\BibliotecaDigital\\bd\\clientes_cadastrados.txt", "r+
     }
 }
 
-// Remover um livro da base de dados
+/**
+ * Remover um livro da base de dados
+ */
 void removerLivro(int id) {
     FILE *arquivo = fopen("C:\\BibliotecaDigital\\bd\\clientes_cadastrados.txt", "r");
     FILE *arquivoAux = fopen("C:\\BibliotecaDigital\\bd\\temp.txt", "w");

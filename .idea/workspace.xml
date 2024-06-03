@@ -20,9 +20,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b60e198-11aa-4724-a7c8-0c51bbc28290" name="Changes" comment="Implementação Emprestimo / Devolução e Remoção de Livros">
+    <list default="true" id="6b60e198-11aa-4724-a7c8-0c51bbc28290" name="Changes" comment="Biblioteca Digital Finalizada">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/biblio.c" beforeDir="false" afterPath="$PROJECT_DIR$/biblio.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/biblio.h" beforeDir="false" afterPath="$PROJECT_DIR$/biblio.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -262,7 +263,9 @@
       <workItem from="1717167804119" duration="1102000" />
       <workItem from="1717175330435" duration="5238000" />
       <workItem from="1717185587014" duration="798000" />
-      <workItem from="1717411491898" duration="58000" />
+      <workItem from="1717411491898" duration="837000" />
+      <workItem from="1717414212948" duration="369000" />
+      <workItem from="1717415053041" duration="1739000" />
     </task>
     <task id="LOCAL-00001" summary="Implementação do Cadastro Livro em arquivo">
       <option name="closed" value="true" />
@@ -312,7 +315,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717180189568</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Biblioteca Digital Finalizada">
+      <option name="closed" value="true" />
+      <created>1717411639371</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717411639371</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Biblioteca Digital Finalizada">
+      <option name="closed" value="true" />
+      <created>1717411709112</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717411709112</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,6 +350,7 @@
     <MESSAGE value="Merge dos códigos + Implementação Login / Listar livros pelo documento" />
     <MESSAGE value="Implementação Emprestimo / Devolução" />
     <MESSAGE value="Implementação Emprestimo / Devolução e Remoção de Livros" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementação Emprestimo / Devolução e Remoção de Livros" />
+    <MESSAGE value="Biblioteca Digital Finalizada" />
+    <option name="LAST_COMMIT_MESSAGE" value="Biblioteca Digital Finalizada" />
   </component>
 </project>
