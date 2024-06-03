@@ -147,14 +147,6 @@ void consultarUmLivro(int id) {
                     printf("\n");
                     break;
                 }
-                    // Pular as linhas correspondentes aos dados do livro se o ID nao corresponde
-                    fgets(buffer, sizeof(buffer), arquivo); // Título
-                    fgets(buffer, sizeof(buffer), arquivo); // Autor
-                    fgets(buffer, sizeof(buffer), arquivo); // Gênero
-                    fgets(buffer, sizeof(buffer), arquivo); // Ano de Publicação
-                    fgets(buffer, sizeof(buffer), arquivo); // ISBN
-                    fgets(buffer, sizeof(buffer), arquivo); // Linha separadora
-                    fgets(buffer, sizeof(buffer), arquivo); // Para disponibilidade
             }
         }
 
