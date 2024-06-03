@@ -66,13 +66,13 @@ Para acessar o menu principal da aplicação é preciso inserir o login de usuá
 
 ## Problemas e Soluções
 Enfrentamos alguns desafios durante o desenvolvimento do projeto, como já era esperado, e com muito esforço e dedicação conseguimos superá-los e encontrar saídas satisfatórias para tais situações, o que fortaleceu a parceria entre a equipe, cultivando em cada um de nós um sentimento de capacidade perante situações indefinidas e mostrando o poder da resiliência para a resolução de problemas.
-Durante o processo, um dos desafios que enfrentamos foi o requisito de "Listar livros", que não foi concluído da forma especificada nos requisitos funcionais. No entanto, implementamos uma solução funcional que permitiu aos usuários acessar os livros de forma eficiente. Reconhecemos que, para atender plenamente às expectativas dos usuários, precisaremos revisitar e aprimorar essa funcionalidade no futuro. Embora não tenha sido possível atender totalmente a essa demanda dentro do prazo deste projeto, planejamos abordá-la em fases subsequentes, garantindo que a experiência do usuário seja aprimorada continuamente.
+Durante o processo, um dos desafios que enfrentamos foi na funcionalidade de "Listar livros", que não foi concluído da forma especificada nos requisitos funcionais. No entanto, conseguimos implementar uma solução que permitiu aos usuários acessar os livros de forma eficiente. Reconhecemos que, para atender plenamente às expectativas dos usuários, precisaremos revisitar e aprimorar essa funcionalidade no futuro. Embora não tenha sido possível atender totalmente a essa demanda dentro do prazo deste projeto, planejamos abordá-la em fases subsequentes, garantindo que a experiência do usuário seja aprimorada continuamente.
 Apesar de termos alcançado muitos dos nossos objetivos iniciais, o projeto da Biblioteca Digital é dinâmico e contínuo. No futuro, é possível expandir o acervo, aumentar a diversidade de materiais disponíveis, implementar melhorias contínuas baseadas no feedback dos usuários e nas evoluções tecnológicas, e explorar a integração com novas tecnologias, como inteligência artificial e análise de dados, para proporcionar uma experiência ainda mais personalizada e eficiente.
 ## Autores
 * **Bruno Vitor** - *Desenvolvedor* - [BrunoVit0r](https://github.com/BrunoVit0r)
 * **Brenda Gaudêncio** - *Desenvolvedora* - [brendagaudencio](https://github.com/brendagaudencio)
-* **Guilherme Nogueira** - *Documentação* - [guilhermenoglucas](https://github.com/guilhermenoglucas)
-* **Eduardo Faria** - *Desenvolvedor e documentação* - [EduardoMotaFaria](https://github.com/EduardoMotaFaria)
+* **Guilherme Nogueira Lucas** - *Documentação* - [guilhermenoglucas](https://github.com/guilhermenoglucas)
+* **Eduardo Faria** - *Desenvolvedor e Documentação* - [EduardoMotaFaria](https://github.com/EduardoMotaFaria)
 
 ## Expressões de Gratidão
 Gostaríamos de expressar nossa gratidão a todos que contribuíram para a elaboração deste projeto, incluindo, principalmente, nossos orientadores e colegas de sala. De maneira geral, o desenvolvimento desse projeto representa um passo significativo na evolução do aprendizado de cada um de nós, integrantes deste time, e estamos confiantes de que nossa jornada adiante no ambiente acadêmico proporcionará valiosas experiências e desafios, agregando cada vez mais em nossa formação.
